@@ -1,0 +1,8 @@
+en la git bash:
+pwd te dice en qué directorio estás
+touch nombre_archivo crea un archivo
+cat nombre_archivo muestra el contenido
+history te lista numerada todos los comandos que has hecho
+!numero_comando repite el comando especificado
+rm nombre_archivo lo borra, -f lo fuerza. 
+rm --help te dice otras funciones (sirve para cualquier comando)

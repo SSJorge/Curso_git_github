@@ -1,0 +1,104 @@
+Volver a activar minimapa
+View->Appareance->Minimap
+ctrl P > Minimap
+
+acciones laterales se llama activity bar
+
+ctrl B ocultar barra lateral
+
+ctrl shift P Activity bar (palette)
+
+ctrl - + agrandar y achicar codigo  
+
+code . desde powershell abre el proyecto de una en vscode (no me funcionó)
+
+sort line asending en palette
+o alt + arriba o abajo
+
+shift tab borrar indentacion (una o mas lineas)   
+PALETTE: TOGGLE LINE COMMENT COMENTAR CODIGO DE UNA->>> CTRL + } (yo elegi shift + |)
+SHIFT ALT A comentar solo una parte de una linea (toggle block comment)
+
+ctrl + click derecho te lleva al archivo que apretaste y si no existe te da la opción de crearlo
+
+ctrl + click para hojear funcion o alt f12
+
+ctrl w y ctrl shift T sirven en vscode (cerrar y volver a abrir pestaña cerrada)
+ctrl shft z rehacer (ctrl y)
+
+ctrl shift k borrar una linea, ctrl shift l elige todas esas incidencias y luego se pueden borrar todas a la vez
+
+ctrl ñ ocultar y mostrar terminal (debes terner extension terminal instalada)
+
+palette: wrap 		puede incluir codigo a ambos lados de una como <code>codigo</code>
+
+ctrl p sirve para buscar archivos
+shift alt + arriba o abajo copia la linea inmediatamente
+
+ctrl alt arriba abajo para elegir mas de una linea y poder escribir en ellas a la vez (esc para salir)
+
+ctrl shift -> o <- selecciona automaticamente una parte de la linea (o con ctrl doble click)
+se puede hacer ctrl c a todos los colores para aplicarlo de una vez a todos
+<span>amarillo</span>
+<span>rojo</span>
+<span>verde</span>
+<span>naranja</span>
+<span>morado</span>
+<span>negro</span>
+<span>blanco</span>
+
+<!-- Objetivo final -->
+<span class="amarillo">amarillo</span>
+<span class="rojo">rojo</span>
+<span class="verde">verde</span>
+<span class="naranja">naranja</span>
+<span class="morado">morado</span>
+<span class="negro">negro</span>
+<span class="blanco">blanco</span>
+
+palette: transofrm to uppercase o lowercase y asi poder transformar la primera letra (o toda la palabara) de multiples lineas a la vez
+
+ctrl+d next find match (pone otro cursor en la siguiente ocurrencia)
+
+ctrl + l selecciona toda la linea pero deja el cursor abajo, con ctrl + end queda al final
+
+shift all i -> palette cursor end lines, pone cursor al final de cada linea 
+
+
+
+raro aprenderse ctrl shti + o es como ctrl p y @ para navegar o buscar cosas/definiciones de una funcion en la que estas
+
+palette: :numero te lleva directo a esa linea (ctrl g)
+
+ctrl inicio y ctrl fin te llevan al inicio y fin del archivo
+
+
+
+
+palette: markdown open preview 
+
+si selecciono una def y aprierto F2 puedo reemplazarla en mas de un archivo al mismo tiempo (en archivos donde se llama a esa funcion)
+
+palette: user snippets configure (elegir extension)
+"Print texto": {
+		"prefix": "clgt",
+		"body": [
+			"console.log('Estoy ${1:aqui}');",
+			"$2"
+		],
+		"description": "Log output to console text"
+	},
+notas: 
+Cada linea se debe separar por , ""
+puede haber mas de un numero para multiples cursores
+al presionar tab me voy al $2
+reemplazar tabulaciones por espacio. 
+
+
+// https://pokeapi.co/      -> copiar todo el json, luego palette paste json as code y poner Pokemon como nivel superior 
+
+con extension todo highlight poner //TODO: O //FIXME: y luego en palette poner todo highlight y aparece el listado de lo pendiente
+
+codesnap para crear imagenes de codigo
+
+liveserver para ver html
