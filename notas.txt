@@ -6,3 +6,45 @@ history te lista numerada todos los comandos que has hecho
 !numero_comando repite el comando especificado
 rm nombre_archivo lo borra, -f lo fuerza. 
 rm --help te dice otras funciones (sirve para cualquier comando)
+
+git init crea carpeta .git (repositorio)
+git status ve el estado(?
+git add añade archivos para commitearlos
+git log me da todo el historial de commits
+git remove nombre_archivo si quiero deshacer un git add (git --cached nombre_arch)
+git checkout codigo (el codigo que sale en el commit al hacer git log) te devuelve a esa version
+git show muestra lo que se modifico de un commit a otro
+
+git config --global (un solo - espera letra y -- espera palabra)
+
+si se ven muchos commit en git log aprietas q para salir (espacio para ver los demas?)
+
+git branch nos dice todas las ramas que tnemos
+
+si hago commit sin comentario me manda a bin, esc y q no sirven para salir, aprieto i y abajo dira INSERT, escribo el comentario, luego esc y :wq, o esc shift zz. :q! se aborta el commit
+
+git diff codigo_commit1 codigo_commit2 (el orden importa)
+
+git reset codigo_commit deshace los cambios hasta ese commit, con --hard los deshace por siempre y con soft aun se quedan en staging
+
+git coomit -am hace el add altiro (tambien espera comentario)
+
+git log --stat tambien muestra lo que se cambió
+
+git push sube cambios a repo remoto
+git pull trae los cambios del repo remoto
+fecth trae la actualizacion. merge (te copia esa actualizacion en los archivos locales) las junta. pull es fecth y merge
+
+git branch nos muestra todas las ramas que tenemos
+git branch nombre_rama
+git checkout nombre_rama para moverse a esa rama
+
+puedo hacer git log nombre_rama desde master
+
+el merge trae los cambios, o sea se hace en master de una rama x
+git merge nombre_rama
+
+conflicto merge (arreglar en el editor, en el ej borra >>>>>HEAD <<<<<otra_rama y borra la linea que no quiere guardar para dejar la que si va)
+ y luego hacer commit y listo
+
+
