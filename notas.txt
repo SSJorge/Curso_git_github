@@ -27,7 +27,7 @@ git diff codigo_commit1 codigo_commit2 (el orden importa)
 
 git reset codigo_commit deshace los cambios hasta ese commit, con --hard los deshace por siempre y con soft aun se quedan en staging
 
-git coomit -am hace el add altiro (tambien espera comentario)
+git commit -am hace el add altiro (tambien espera comentario)
 
 git log --stat tambien muestra lo que se cambió
 
@@ -45,6 +45,20 @@ el merge trae los cambios, o sea se hace en master de una rama x
 git merge nombre_rama
 
 conflicto merge (arreglar en el editor, en el ej borra >>>>>HEAD <<<<<otra_rama y borra la linea que no quiere guardar para dejar la que si va)
- y luego hacer commit y listo
+ y luego hacer commit y listo 
 
 
+{
+para mandarlo a un repo remoto:
+git remote add origin codigo_pegado_repo_remoto_https
+git push origin master (vas a hacer un push al origin de la rama master)
+git pull origin master
+git pull origin master --allow-unrelated-histories (por si salia un error en el comando anterior )
+git push origin master
+
+git pull origin main --allow-unrelated-histories
+resolver conflictos
+git coomit -am ""
+git pull origin main
+}
+O mejor omitir el README y 
