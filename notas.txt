@@ -38,6 +38,7 @@ fecth trae la actualizacion. merge (te copia esa actualizacion en los archivos l
 git branch nos muestra todas las ramas que tenemos
 git branch nombre_rama
 git checkout nombre_rama para moverse a esa rama
+git branch -D nombre_rama para borrarla
 
 puedo hacer git log nombre_rama desde master
 
@@ -62,3 +63,53 @@ git coomit -am ""
 git pull origin main
 }
 O mejor omitir el README y 
+insertar comandos que salen en github
+si remote da error usar comando git remote remove origin y luego seguir
+
+si hago cambios en github luego debo hacer git pull o git pull origin main. Al hacer git log si están en la misma versión git y github saldrá que el HEAD -> main,origin/main
+
+eliminar repositorio local rm -rf .git 
+
+con https si pierdo mi computadora y alguien tiene acceso a ella puede estar haciendo commits o cosas directamente sobre giyhub, y con ssh es un poco mas dificil
+en un intercambio de datos entre un ente x e y, cada uno tiene su llave publica y privada, x manda mensajes a y con la llave publica de y y dsp el los desifra con su propia llave privada
+lo recomendable es hacer ña ssh key en el home (users/jorge)
+ssh-keygen -t rsa -b 4096 -C "correo"
+pregunta donde quieres guardarla, solo apretar enter
+pregunta por passphrase
+agregar la clave publica al path
+eval $(ssh-agent -s)    evalua si ese comando se dispara
+a el le sale Agent pid 2311, agent significa que efectivamente está corriendo, pid es process id y el numero es el n del proceso
+el servidor aun no sabe que la llave se creo
+ir a carpeta ssh en git bash
+ssh-add ruta(la de el es ~/.ssh/id_rsa)
+en github ir a settings ssh and gpg keys, new ssh key, poner titulo y en key añadir el texto de la key pub 
+git remote set-url origin cambiar nombre origin (?)
+git remote set-url origin ssh_key_github
+
+git log --all --graph
+--decorate --oneline
+alias ramas="git log --all --graph --decorate --oneline"
+ahora si ingreso ramas se ejecuta ese comando en el git bash
+unalias nombre_alias
+
+para versionar desde cierto commit
+git tag -a v1.0 -m "mensaje como primera version de la app" codigo_commit
+git tag me muestra las tag actuales
+git show-ref --tags me muestra las referencias de los tag
+git push origin --tags     para enviar tag
+git tag -d nombre_tag     para borrarlo, pero es solo local
+git push origin :refs/tags/nombre_tag   borra la referencia en github
+
+git show-branch muestra todas las ramas con los cambios que han tenido. con --all salen mas datos
+gitk de manera mas visual
+git push origin nueva_rama manda la nueva rama a las branches de github
+
+settings-manage access para agregar colaboradores
+como colaborador si voy a avanzar en  la rama x, desde main hago git pull origin x
+
+si resuelvo conflictos dsp de intentar hacer merge debo hacer add y commit 
+
+
+
+
+.
