@@ -60,7 +60,7 @@ palette: transofrm to uppercase o lowercase y asi poder transformar la primera l
 
 ctrl+d next find match (pone otro cursor en la siguiente ocurrencia)
 
-ctrl + l selecciona toda la linea pero deja el cursor abajo, con ctrl + end queda al final
+ctrl + l selecciona toda la linea pero deja el cursor abajo, con shift + end queda al final
 
 shift all i -> palette cursor end lines, pone cursor al final de cada linea 
 
