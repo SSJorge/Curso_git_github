@@ -19,7 +19,7 @@ git config --global (un solo - espera letra y -- espera palabra)
 
 si se ven muchos commit en git log aprietas q para salir (espacio para ver los demas?)
 
-git branch nos dice todas las ramas que tnemos
+git branch nos dice todas las ramas que tnemos, git branch -r  nos dice las ramas remotas, -a para ver todas
 
 si hago commit sin comentario me manda a bin, esc y q no sirven para salir, aprieto i y abajo dira INSERT, escribo el comentario, luego esc y :wq, o esc shift zz. :q! se aborta el commit
 
@@ -109,6 +109,52 @@ como colaborador si voy a avanzar en  la rama x, desde main hago git pull origin
 
 si resuelvo conflictos dsp de intentar hacer merge debo hacer add y commit 
 
+crear gitignore en carpeta raiz del proyecto
+
+github es como tener nuestro repo hosteado
+
+rebase es como no haber hecho una rama para solucionar un bug y poner esos commits/actualizaciones directamente en la rama principal (se elimina la historia de la rama que se habia creado)
+
+git stash guarda cambios en un lugar temporal (si apagas el pc se pierden)
+git stash list (WIP work in progress)->ej:stash@{0}: WIP on main: 46d6cd4 ulitmo_commit 
+git stash pop para traer de vuelta lo que habia guardado
+git stash branch nombre_rama tiro esos cambios a una nueva rama (hay que hacer commit para q se desvinculen  los cambios de la rama anterior)
+git stash drop para borrar stash
+
+git clean para borrar archivos que no hemos agregado con git add 
+hay q especificar la accion. --dry-run te dice cuales removerias
+git clean -f para forzar la eliminacion (los del git ignore se ignoran)
+
+git log --oneline (en la rama q tiene un commit q quiera traer) para ver cual es el commit q queremos y hacer cherry para subir solo hasta ese commit
+git cherry-pick codigo_commit para traer solo los cambios hasta ese commit (no es recomendable usarla)
+
+cuando haces commit y no querias
+git commit -- amend     es como enmendar o solucionar, o sea que los cambios se pegan al commit anterior (te manda a editor para ver si quieres cambiar el  omentario, recordar salir esc :wq)
+
+cuando rompes algo
+git reflog sirve para ver todo, buscamos a donde queremos volver y copiamos el HEAD@{n}
+reset --soft mantiene el area stagging(a lo q le das add)(casi no se usa) --hard reseta todo
+git reset --hard HEAD@{n}
+
+git grep Palabra te dice todos los lugares donde esta esa palabra
+git grep -n palabara para q diga la linea 
+git log -S "Palabra" busca los commits en los que se comentó esa palabara
+
+git shortlog nos muestran todos los commits que han hecho los usuarios
+git shortlog -sn solo muestra la cantidad 
+git shortlog -sn --all tambien suma los q fueron eliminados
+git shortlog -sn --all--no-merges para no incluir merges
+git config --global alias.stats "git shortlog -sn --all--no-merges"     cuando haga git stats se ejecutara
+
+git blame para ver cambios en archivo y quien y qué hizo
+ls -l para ver carpetas y  navegar hasta la que tiene main.dart por ej
+git blame main.dart o git blame -c main.dart se ve un poco mejor
+vim README.md luego esc :set number te muestra las lineas del archivo, esc y :q
+git blame README.md -L12,24 te dira los cambios de la linea 12 a la 24
+
+los issues tiene numero #n, si en el comentario de mi commit agrego fixes/closes/resolves #n se linkeara al issue correspondiente
+
+se pueden crear labels para situaciones especificas
 
 
 
