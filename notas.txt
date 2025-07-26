@@ -15,6 +15,8 @@ git remove nombre_archivo si quiero deshacer un git add (git --cached nombre_arc
 git checkout codigo (el codigo que sale en el commit al hacer git log) te devuelve a esa version
 git show muestra lo que se modifico de un commit a otro
 
+???? git checkout --<file>, git revert
+
 git config --global (un solo - espera letra y -- espera palabra)
 
 si se ven muchos commit en git log aprietas q para salir (espacio para ver los demas?)
@@ -152,10 +154,70 @@ git blame main.dart o git blame -c main.dart se ve un poco mejor
 vim README.md luego esc :set number te muestra las lineas del archivo, esc y :q
 git blame README.md -L12,24 te dira los cambios de la linea 12 a la 24
 
-los issues tiene numero #n, si en el comentario de mi commit agrego fixes/closes/resolves #n se linkeara al issue correspondiente
+los issues tiene numero #n, si en el comentario de mi commit agrego fixes/closes/resolves #n se linkeara al issue correspondiente (en cualquier comentario se genera link a issues con #n)
+se pueden crear labels para situaciones especificas al crear issues
+los milestone son un grupo de issues para especificar que por ej para tal fecha debemos haber solucionado estos bug, errores o agregar feature
 
-se pueden crear labels para situaciones especificas
+wikis son publicas, cualquiera puede editarlas, se configura en settings
+projects es como un tablero kanban  
 
+gist para compartir codigo rapido
+
+stats https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#compact-language-card-layout
+shields.io 
+iconos (deben ser .svg)
+ https://gist.github.com/rxaviers/7360908 
+ o http://cdn.jsdelivr.net/npm/simple-icons@v3/icons/
+ o https://github.com/jmnote/z-icons
+ o https://github.com/devicons/devicon    en carpeta icons
+
+markdown:
+italica: *palabra*
+subrayado _palabra_
+negrita **palbra** o __palabra__
+tachar ~~palabra~~
+--- o ___ se hace una linea
+\* escribe * porque \ hace que el sig caracter lo tome tal como es 
+> Esto es una cita 
+
+[Youtube](enlace)
+[Youtube](enlace "texto al poner mouse")
+
+* Item 1
+    *subitem 1
+* Item 2
+* Item 3
+
+
+1. Item 1
+1. Item 2
+1. Item 3 
+muestra lista ordenada del 1 al 3 aunque todos sean 1.
+
+`codigo`
+```
+bloque de codigo
+```
+
+![imagen](enlace)
+
+```lenguaje
+bloque de codigo
+``` para resaltado de sintaxis
+ej:
+```java
+    public class Persona{
+        protected int edad;
+    }
+```
+tablas
+|Nombre|edad|
+|---|---|   (pueden ir los - que quiera)
+|Jorge|22|
+
+task list
+* [x] Task 1
+* [] Task 2
 
 
 .
